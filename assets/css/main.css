@@ -4687,3 +4687,22 @@ input, select, textarea {
 		}
 
 	}
+#header {
+  position: relative;
+  z-index: 1000;
+}
+
+#header #nav {
+  position: relative;
+  z-index: 1001;    /* чуть выше, чем сам header, чтобы ссылки были точно сверху */
+}
+
+/* Убираем запрет кликов, если он где‑то прописан */
+#intro,
+#wrapper::before {
+  pointer-events: none;
+}
+
+#header #nav a {
+  pointer-events: auto;
+}
