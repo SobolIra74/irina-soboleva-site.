@@ -6,12 +6,45 @@
 -->
 <html>
 	<head>
-		<title>Massively by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
+  <title>Massively by HTML5 UP</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+  <style>
+    /* Адаптивность изображений и кнопок */
+    .image.fit img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      header.major h2,
+      h2.marianna {
+        font-size: 1.5em !important;
+      }
+
+      .button.large.primary {
+        font-size: 1em;
+        padding: 0.75em 1.5em;
+      }
+
+      .image.fit img {
+        max-height: 300px;
+      }
+
+      #intro h1 {
+        font-size: 2em;
+      }
+
+      #intro p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
