@@ -48,11 +48,37 @@
       <ul class="actions">
         <li><a href="https://api.whatsapp.com/send?phone=79630957712" class="button primary">Связаться в WhatsApp</a></li>
       </ul>
+<section id="reviews">
+  <header class="major">
+    <h2>Отзывы клиентов</h2>
+  </header>
 
-    </section>
+  <div class="reviews-container">
+    <!-- стрелки -->
+    <span class="reviews-prev icon fa-angle-left"></span>
+    <span class="reviews-next icon fa-angle-right"></span>
+
+    <!-- сам блок слайдов -->
+    <div class="reviews-slider" data-images="review1.jpg,review2.jpg,review3.jpg">
+      <div class="reviews-slide">
+        <img src="images/review1.jpg" alt="Отзыв 1" />
+      </div>
+      <div class="reviews-slide">
+        <img src="images/review2.jpg" alt="Отзыв 2" />
+      </div>
+      <div class="reviews-slide">
+        <img src="images/review3.jpg" alt="Отзыв 3" />
+      </div>
+    </div>
+
+    <!-- индикаторы -->
+    <div class="reviews-indicators">
+      <span data-slide="0" class="active"></span>
+      <span data-slide="1"></span>
+      <span data-slide="2"></span>
+    </div>
   </div>
-
-  <!-- Footer -->
+</section>  <!-- Footer -->
   <footer id="footer">
     <section class="split contact">
       <section class="alt">
@@ -81,6 +107,43 @@
   <!-- Скрипты -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/main.js"></script>
+<script>
+$(function() {
+  // Кэшируем элементы
+  var $container  = $('.reviews-container'),
+      $slides     = $container.find('.reviews-slide'),
+      $indicators = $container.find('.reviews-indicators span'),
+      total       = $slides.length,
+      current     = 0;
 
+  // Функция переключения на слайд n
+  function goToSlide(n) {
+    // Скрываем старый
+    $slides.eq(current).css('opacity', 0);
+    $indicators.eq(current).removeClass('active');
+
+    // Вычисляем новый индекс по кругу
+    current = (n + total) % total;
+
+    // Показываем новый
+    $slides.eq(current).css('opacity', 1);
+    $indicators.eq(current).addClass('active');
+  }
+
+  // Вешаем события на стрелки
+  $container.find('.reviews-next').on('click', function() {
+    goToSlide(current + 1);
+  });
+  $container.find('.reviews-prev').on('click', function() {
+    goToSlide(current - 1);
+  });
+
+  // И на индикаторы
+  $indicators.on('click', function() {
+    var idx = $(this).data('slide');
+    goToSlide(idx);
+  });
+});
+</script>
 </body>
 </html>
