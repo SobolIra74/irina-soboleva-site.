@@ -1,9 +1,7 @@
 <!DOCTYPE HTML>
 <!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+	.Дизайнер интерьера
+Соболева Ирина 	-->
 <html>
 	<head>
   <title>Massively by HTML5 UP</title>
@@ -246,6 +244,15 @@
 								</ul>
 							</section>
 						</section>
+<section class="legal-links">
+  <h3>Правовая информация</h3>
+  <ul class="links-list">
+    <li><a href="offer.html" target="_blank">Публичная оферта</a></li>
+    <li><a href="privacy.html" target="_blank">Политика конфиденциальности</a></li>
+    <li><a href="cookies.html" target="_blank">Cookie‑политика</a></li>
+  </ul>
+</section>
+
 					</footer>
 
 				<!-- Copyright -->
@@ -264,6 +271,38 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
                         <script type="module" src="assets/js/marianna.js"></script>
+<!-- HTML баннера -->
+<div id="cookie-banner" style="
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: rgba(0,0,0,0.85); color: #fff;
+    padding: 1em; text-align: center; font-size: 0.9em;
+    display: none; z-index: 10000;
+">
+  Этот сайт использует cookie для улучшения работы. 
+  <button id="cookie-accept" style="
+      margin-left: 1em; padding: 0.5em 1em;
+      background: #4CAF50; color: #fff; border: none;
+      border-radius: 4px; cursor: pointer;
+  ">
+    Принять
+  </button>
+</div>
+
+<script>
+(function() {
+  var banner = document.getElementById('cookie-banner');
+  var accept = document.getElementById('cookie-accept');
+  // Если согласия нет в localStorage — показываем баннер
+  if (!localStorage.getItem('cookieConsent')) {
+    banner.style.display = 'block';
+  }
+  accept.addEventListener('click', function() {
+    localStorage.setItem('cookieConsent', 'yes');
+    banner.style.display = 'none';
+  });
+})();
+</script>
+
                            
 
 	</body>

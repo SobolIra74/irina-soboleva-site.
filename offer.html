@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Публичная оферта — IRINA SOBOLEVA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+  <!-- Header + Nav -->
+  <header id="header">
+    <a href="index.html" class="logo">IRINA SOBOLEVA</a>
+    <nav id="nav">
+      <ul class="links">
+        <li><a href="index.html">Портфолио</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="about.html">О себе</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div id="main">
+    <section class="post">
+      <header class="major">
+        <h1>Публичная оферта</h1>
+      </header>
+      <p>Настоящая публичная оферта (далее — «Оферта») является официальным предложением индивидуального предпринимателя Соболевой Ирины (№ 78239575) предоставить услуги по дизайну интерьера на изложенных ниже условиях.</p>
+
+      <ol>
+        <li><strong>Предмет договора.</strong> Оказание услуг по разработке дизайн‑проекта жилых и/или коммерческих помещений.</li>
+        <li><strong>Цена и порядок оплаты.</strong> Стоимость услуг определяется в разделе «Услуги» сайта. Оплата — 100% предоплата/50% предоплата + 50% по факту по согласованию.</li>
+        <li><strong>Сроки оказания.</strong> Срок выполнения дизайн‑проекта составляет от 10 до 90 дней в зависимости от площади и сложности.</li>
+        <li><strong>Права и обязанности сторон.</strong> Исполнитель обязуется выполнить работы качественно и в сроки, заказчик обязуется своевременно предоставить всю необходимую информацию и оплатить услуги.</li>
+        <li><strong>Ответственность.</strong> В случае просрочки Исполнитель уплачивает неустойку 0,1% от стоимости услуг за каждый день просрочки. Заказчик имеет право отказаться от услуг с возвратом пропорциональной части оплаты.</li>
+        <li><strong>Форс‑мажор.</strong> Стороны освобождаются от ответственности за частичное или полное неисполнение обязательств, вызванное обстоятельствами непреодолимой силы.</li>
+        <li><strong>Прочие условия.</strong> Все споры решаются путем переговоров, в случае недостижения соглашения — в соответствии с законодательством РФ.</li>
+      </ol>
+
+      <p>Нажимая кнопку «Заказать», вы принимаете условия этой публичной оферты.</p>
+      
+      <ul class="actions">
+        <li>
+          <label>
+            <input type="checkbox" id="accept-offer" /> Я согласен с условиями оферты
+          </label>
+        </li>
+        <li>
+          <a href="services.html" class="button primary" id="btn-order">Заказать</a>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <section class="legal-links">
+      <h3>Правовая информация</h3>
+      <ul class="links-list">
+        <li><a href="offer.html" target="_blank">Публичная оферта</a></li>
+        <li><a href="privacy.html" target="_blank">Политика конфиденциальности</a></li>
+        <li><a href="cookies.html" target="_blank">Cookie‑политика</a></li>
+      </ul>
+    </section>
+    <!-- … ваши контакты … -->
+  </footer>
+
+  <!-- Скрипты -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Блокируем кнопку «Заказать», пока не согласован оферта
+    $('#btn-order').on('click', function(e) {
+      if (!$('#accept-offer').is(':checked')) {
+        e.preventDefault();
+        alert('Пожалуйста, подтвердите согласие с условиями оферты.');
+      }
+    });
+  </script>
+</body>
+</html>
